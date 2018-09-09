@@ -118,3 +118,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+CACHE_URL = [('^user/firstname',60*60),
+              ('^user/lastname',60*60),
+              ('^user/fullname',60*60)]
