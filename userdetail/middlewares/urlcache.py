@@ -18,8 +18,12 @@ class UrlCache():
                 response = self.get_response(request)
                 cache.set(req_url, response, req_url_set[1])
                 return response
+        else:
+            response = self.get_response(request)
+            return response
+
     
-    def url_cache_config(url):
+    def url_cache_config(self, url):
       for urlconfig  in self.urls:
         if urlconfig[0] == url:
             return urlconfig
